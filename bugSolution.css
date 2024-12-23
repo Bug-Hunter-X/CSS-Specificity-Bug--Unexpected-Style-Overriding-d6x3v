@@ -1,0 +1,19 @@
+To solve this problem, we refactor the CSS to prioritize better specificity without relying on `!important`:
+
+```css
+/* Style A */
+div {
+  color: blue;
+}
+
+div p {
+  color: green;
+}
+
+/* Style B (no longer needs !important) */
+p {
+  color: red;
+}
+```
+
+This solution improves maintainability and predictability.  By using a more appropriate element selection, we remove the need for `!important`. Style B is more specific because it directly targets the `p` elements, effectively overriding Style A's style for the `p` elements only.  The order of declarations in this version maintains the correct stylistic choices.
