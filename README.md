@@ -1,0 +1,3 @@
+# CSS Specificity Bug: Unexpected Style Overriding
+
+This repository demonstrates a common issue in CSS: unexpected style overriding due to specificity.  The `bug.css` file contains CSS rules that lead to unexpected results because of the interplay between `!important` and the cascade.  The `bugSolution.css` file provides a solution by refactoring the CSS to avoid unnecessary use of `!important` and improve maintainability.
