@@ -1,0 +1,20 @@
+The CSS specificity can lead to unexpected styling issues.  For instance, consider the following scenario:
+
+```css
+/* Style A */
+div p {
+  color: blue;
+}
+
+/* Style B */
+div p {
+  color: red !important;
+}
+
+/* Style C */
+div > p {
+  color: green;
+}
+```
+
+Style B has the highest specificity due to the `!important` flag, so it will override Style A and Style C. Style C would override Style A if `!important` wasn't involved.  However, excessively using `!important` can make CSS harder to maintain and debug.
